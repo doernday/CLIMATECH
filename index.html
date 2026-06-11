@@ -30,6 +30,14 @@
             background-image: linear-gradient(rgba(15,23,42,0.85)),
             url('./Station météo.jpeg');
             background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            /* --- CODE SPÉCIAL POUR LES TÉLÉPHONES --- */
+           @media (max-width: 768px) {
+    body {
+        /* On désactive le mode 'fixed' qui bug sur mobile, l'image va défiler normalement */
+        background-attachment: scroll; 
+    }
         }
 
         header {
