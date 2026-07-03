@@ -188,7 +188,7 @@
          <div class="card winddirection">
             <h3>Direction du vent</h3>
             <div class="value"><span id="direction-val">0</span><span class="unit"> </span></div>
-            <p style="color: var(--text-muted); margin: 0;">Anemometre</p>
+            <p style="color: var(--text-muted); margin: 0;">Anémomètre</p>
         </div>
     </main>
 
@@ -200,18 +200,18 @@
         // Simulation de mise à jour des données en temps réel (Toutes les 3 secondes)
         function DonneesMeteo() {
             // Génère des variations réalistes
-            const Temp = (22 + Math.random() * 5).toFixed(1);
-            const Hum = Math.floor(55 + Math.random() * 15);
-            const Pres = Math.floor(1008 + Math.random() * 10);
-            const Speed = Math.floor(55 + Math.random() * 15);
+            const Temp = data.t;
+            const Hum = data.h;
+            const Pres = data.p;
+            const Speed = Math.floor(55 + Math.random() * 15;
             const Direction = Math.floor(1008 + Math.random() * 10);
 
             // Injection des valeurs dans le HTML
-            document.getElementById('t').innerText = Temp;
-            document.getElementById('h').innerText = Hum;
-            document.getElementById('p').innerText = Pres;
-            document.getElementById('h').innerText = Speed;
-            document.getElementById('p').innerText = Direction;
+            document.getElementById('temperature').innerText = Temp;
+            document.getElementById('humidité').innerText = Hum;
+            document.getElementById('pression').innerText = Pres;
+            document.getElementById('vitessevent').innerText = Speed;
+            document.getElementById('direction').innerText = Direction;
         }
 
         // Appeler la fonction toutes les 3000ms
