@@ -14,6 +14,9 @@
             --accent-temp: #f59e0b;
             --accent-hum: #3b82f6;
             --accent-pres: #10b981;
+             --accent-vitessevent: #ff4500;
+            --accent-diretionvent: #40e0d0;
+         
         }
 
         body {
@@ -102,6 +105,9 @@
         .temp .value { color: var(--accent-temp); }
         .humidity .value { color: var(--accent-hum); }
         .pressure .value { color: var(--accent-pres); }
+        .windspeed.value { color: var(--accent-vitessevent); }
+        .winddirection.value { color: var(--accent-directionvent); }
+        
 
         .unit {
             font-size: 1.5rem;
@@ -146,7 +152,7 @@
 
     <header>
              <h1>CLIMATECH -
-            l'intélligence au service du climat
+            l'intelligence au service du climat
         </h1>
         <p>Système de suivi environnemental en temps réel</p>
         <div class="status-container">
@@ -158,16 +164,28 @@
         <div class="card temp">
             <h3>Température</h3>
             <div class="value"><span id="temp-val">24.5</span><span class="unit">°C</span></div>
-            <p style="color: var(--text-muted); margin: 0;">Capteur BME280</p>
+            <p style="color: var(--text-muted); margin: 0;">Capteur DHT11</p>
         </div>
 
         <div class="card humidity">
             <h3>Humidité</h3>
             <div class="value"><span id="hum-val">62</span><span class="unit">%</span></div>
-            <p style="color: var(--text-muted); margin: 0;">Capteur SHT35</p>
+            <p style="color: var(--text-muted); margin: 0;">Capteur DHT11/p>
         </div>
 
         <div class="card pressure">
+            <h3>Pression</h3>
+            <div class="value"><span id="pres-val">1013</span><span class="unit"> hPa</span></div>
+            <p style="color: var(--text-muted); margin: 0;">Atmosphérique</p>
+        </div>
+
+         <div class="card windspeed">
+            <h3>Vitesse du vent</h3>
+            <div class="value"><span id="pres-val">1013</span><span class="unit"> hPa</span></div>
+            <p style="color: var(--text-muted); margin: 0;">Atmosphérique</p>
+        </div>
+
+         <div class="card winddirection">
             <h3>Pression</h3>
             <div class="value"><span id="pres-val">1013</span><span class="unit"> hPa</span></div>
             <p style="color: var(--text-muted); margin: 0;">Atmosphérique</p>
