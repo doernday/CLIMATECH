@@ -14,8 +14,8 @@
             --accent-temp: #f59e0b;
             --accent-hum: #3b82f6;
             --accent-pres: #10b981;
-            --accent-vitessevent: #3b82f6;
-            --accent-diretionvent: #40e0d0;
+            --accent-vitessevent: #60f63b;
+            --accent-diretionvent: #ab40e0;
          
         }
 
@@ -203,9 +203,8 @@
             const Temp = data.t;
             const Hum = data.h;
             const Pres = data.p;
-            const Speed = Math.floor(55 + Math.random() * 15;
-            const Direction = Math.floor(1008 + Math.random() * 10);
-
+            const Speed = data.vent_vitesse;
+            const Direction = data.vent_direction;
             // Injection des valeurs dans le HTML
             document.getElementById('temperature').innerText = Temp;
             document.getElementById('humidité').innerText = Hum;
